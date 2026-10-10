@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Kartly - Everyday essentials{% endblock %}</title>
+<link rel="stylesheet" href="/static/css/style.css"></head>
+<body data-page="{% block page %}{% endblock %}">
+<div class="topbar">Free delivery on every order &nbsp;|&nbsp; Pay when it arrives &nbsp;|&nbsp; Easy returns</div>
+<header class="nav"><a class="logo" href="/">Kart<span>ly</span></a>
+<form class="search" action="/products" method="get" role="search"><label class="sr" for="q">Search</label><input id="q" name="q" placeholder="Search products"><button class="btn">Search</button></form>
+<nav aria-label="Main"><a href="/products">Shop</a><a href="/orders">Orders</a><a id="authlink" href="/login">Login</a>
+<a href="/cart" class="cartlink" aria-label="Cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h3l3 12h10l3-9H6"/></svg><b id="cartcount">0</b></a></nav></header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="foot"><div><b>Kartly</b><p>Cash on delivery across India.</p></div><div><a href="/products">Shop</a> <a href="/orders">Orders</a> <a href="/account">Account</a></div><div>support@kartly.example</div></footer>
+<div id="toasts" aria-live="polite"></div>
+<script src="/static/js/api.js"></script><script src="/static/js/common.js"></script>
+{% block scripts %}{% endblock %}</body></html>

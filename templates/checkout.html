@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block title %}Checkout - SimpleStore{% endblock %}{% block page %}checkout{% endblock %}
+{% block content %}<section class="wrap two"><div><h1>Checkout</h1><form id="coform" novalidate><label>Full name<input name="customer_name" required></label><label>Phone<input name="phone" required inputmode="tel"></label><label>Shipping address<textarea name="shipping_address" rows="3" required></textarea></label><p class="error" id="msg" role="alert"></p><button class="btn big" id="place">Place Order (Cash on Delivery)</button></form></div><aside class="card" id="summary"></aside></section>{% endblock %}
+{% block scripts %}<script src="/static/js/checkout.js"></script>{% endblock %}
